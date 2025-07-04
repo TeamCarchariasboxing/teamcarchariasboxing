@@ -312,6 +312,117 @@
     <a href="https://easyasso.fr/inscription.php?Club=teamthaiboxing" target="_blank" style="color:#00ccff; font-weight:bold; text-decoration: none;">➡️ Plateforme d'inscription en ligne</a>
   </p>
 </section>
+    <section class="section fade-in" id="inscriptions" style="background-color:#111; padding:4rem 2rem; border-radius:12px; box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);">
+  <!-- Inscriptions section (déjà existante) ici -->
+  ...
+</section>
+
+<section class="section fade-in" id="boutique" style="background-color:#0d0d0d; padding:4rem 2rem;">
+  <h2 style="text-align:center; color:#00ccff; font-family:'Bebas Neue', cursive; font-size:3.5rem; text-transform:uppercase; letter-spacing:2px;">Boutique du Club</h2>
+  <p style="text-align:center; color:#ccc; max-width:800px; margin:auto;">Commandez nos équipements officiels Carcharias Boxing : tenues, gants, sacs, et plus encore. Paiement sécurisé en ligne ou au club.</p>
+
+  <div id="cart-notice" style="display:none; text-align:center; color:#00ff99; font-weight:bold; margin:1rem 0;">✅ Article ajouté au panier</div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:3rem;">
+    <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
+      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
+        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
+        <h3 style="color:#00ccff;">Maillot Officiel</h3>
+        <p style="color:#ccc;">Taille S à XL</p>
+        <p style="font-weight:bold; color:white;">25€</p>
+        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
+      </div>
+    </a>
+
+    <a href="#" onclick="addToCart('Gants de Boxe', 60); return false;" style="text-decoration:none;">
+      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
+        <img src="images/produits/gants.jpg" alt="Gants de boxe" style="width:100%; border-radius:4px;">
+        <h3 style="color:#00ccff;">Gants de Boxe</h3>
+        <p style="color:#ccc;">10 oz - 14 oz</p>
+        <p style="font-weight:bold; color:white;">60€</p>
+        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
+      </div>
+    </a>
+    
+<a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
+      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
+        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
+        <h3 style="color:#00ccff;">Maillot Officiel</h3>
+        <p style="color:#ccc;">Taille S à XL</p>
+        <p style="font-weight:bold; color:white;">25€</p>
+        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
+      </div>
+    </a>
+    <!-- Ajoutez ici les autres produits de la même manière -->
+  </div>
+
+  <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
+      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
+        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
+        <h3 style="color:#00ccff;">Maillot Officiel</h3>
+        <p style="color:#ccc;">Taille S à XL</p>
+        <p style="font-weight:bold; color:white;">25€</p>
+        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
+      </div>
+    </a>
+
+  <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
+      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
+        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
+        <h3 style="color:#00ccff;">Maillot Officiel</h3>
+        <p style="color:#ccc;">Taille S à XL</p>
+        <p style="font-weight:bold; color:white;">25€</p>
+        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
+      </div>
+    </a>
+
+  <div style="text-align:center; margin-top:3rem;">
+    <button onclick="toggleCart();" style="background:#00ccff; color:black; border:none; padding:1rem 2rem; font-weight:bold; border-radius:8px; cursor:pointer;">🛒 Voir le panier</button>
+  </div>
+
+  <div id="cart" style="display:none; margin-top:2rem; background:#111; color:white; padding:2rem; border-radius:8px; max-width:600px; margin:auto;">
+    <h3 style="text-align:center; color:#00ccff;">🛒 Panier</h3>
+    <ul id="cart-items" style="list-style:none; padding:0;"></ul>
+    <p style="text-align:right; font-weight:bold; margin-top:1rem;">Total : <span id="cart-total">0€</span></p>
+  </div>
+</section>
+
+<script>
+  const cart = [];
+
+  function addToCart(product, price) {
+    cart.push({ product, price });
+    document.getElementById("cart-notice").style.display = "block";
+    setTimeout(() => document.getElementById("cart-notice").style.display = "none", 2000);
+    updateCart();
+  }
+
+  function updateCart() {
+    const list = document.getElementById("cart-items");
+    const total = document.getElementById("cart-total");
+    list.innerHTML = '';
+    let sum = 0;
+    cart.forEach((item, index) => {
+      sum += item.price;
+      const li = document.createElement("li");
+      li.style.marginBottom = "10px";
+      li.innerHTML = `${item.product} - ${item.price}€ <button onclick="removeFromCart(${index})" style="margin-left:10px; background:red; color:white; border:none; border-radius:4px; cursor:pointer;">Supprimer</button>`;
+      list.appendChild(li);
+    });
+    total.innerText = sum + '€';
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function toggleCart() {
+    const cartDiv = document.getElementById("cart");
+    cartDiv.style.display = cartDiv.style.display === "none" ? "block" : "none";
+  }
+</script>
+
 
 </body>
 </html>

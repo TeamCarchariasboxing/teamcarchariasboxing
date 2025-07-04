@@ -246,38 +246,71 @@
     <img src="images/partenaire3.png" alt="Partenaire 3" style="height: 80px; filter: brightness(1.1);">
     <!-- Ajoutez d'autres logos ici -->
   </div>
-</section>
-<section class="section fade-in" id="inscriptions">
-  <h2 style="text-align:center; color:#00ccff; font-family: 'Bebas Neue', cursive; font-size: 3rem;">Inscriptions</h2>
-  <p style="text-align:center; max-width:800px; margin: auto;">
+<section class="section fade-in" id="inscriptions" style="background-color:#111; padding:4rem 2rem; border-radius:12px; box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);">
+  <h2 style="text-align:center; color:#00ccff; font-family: 'Bebas Neue', cursive; font-size: 3.5rem; text-transform:uppercase; letter-spacing:2px;">Inscriptions</h2>
+  <p style="text-align:center; max-width:800px; margin: auto; font-size:1.1rem; color:#ccc;">
     Pour t'inscrire, merci de compléter le formulaire ci-dessous. <br>
     Tu peux aussi télécharger les documents nécessaires : certificat médical, autorisation parentale, fiche d'inscription.
   </p>
 
   <div style="margin-top: 2rem; text-align: center;">
-    <a href="documents/certificat_medical.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem;">📄 Certificat Médical (PDF)</a>
-    <a href="documents/autorisation_parentale.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem;">📄 Autorisation Parentale (PDF)</a>
-    <a href="documents/fiche_inscription.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem;">📄 Fiche d'inscription (PDF)</a>
+    <a href="documents/certificat_medical.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem; text-decoration:none;">📄 Certificat Médical</a>
+    <a href="documents/autorisation_parentale.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem; text-decoration:none;">📄 Autorisation Parentale</a>
+    <a href="documents/fiche_inscription.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem; text-decoration:none;">📄 Fiche d'inscription</a>
   </div>
 
-  <form style="max-width: 700px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: 1rem;" onsubmit="event.preventDefault(); alert('Formulaire soumis. Un responsable vous contactera.');">
-    <input type="text" placeholder="Nom" required style="padding: 0.8rem; border-radius: 5px; border: none;">
-    <input type="text" placeholder="Prénom" required style="padding: 0.8rem; border-radius: 5px; border: none;">
-    <input type="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 5px; border: none;">
-    <input type="tel" placeholder="Téléphone" required style="padding: 0.8rem; border-radius: 5px; border: none;">
-    <select required style="padding: 0.8rem; border-radius: 5px; border: none;">
+  <form onsubmit="event.preventDefault(); document.getElementById('confirmation-msg').style.display = 'block'; this.reset();" style="max-width: 700px; margin: 3rem auto 0; background-color: #1a1a1a; padding: 2rem; border-radius: 10px; display: flex; flex-direction: column; gap: 1rem;">
+    <input type="text" name="nom" placeholder="Nom" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
+    <input type="text" name="prenom" placeholder="Prénom" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
+    <input type="email" name="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
+    <input type="tel" name="tel" placeholder="Téléphone" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
+    <select name="categorie" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
       <option value="">Choisis ta catégorie</option>
       <option>Enfant (5–10 ans)</option>
       <option>Ados (11–15 ans)</option>
       <option>Adultes / Compétiteurs</option>
     </select>
-    <textarea placeholder="Message ou info complémentaire" rows="4" style="padding: 0.8rem; border-radius: 5px; border: none;"></textarea>
-    <label style="font-size: 0.9rem;">
+    <textarea name="message" placeholder="Message ou info complémentaire" rows="4" style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;"></textarea>
+
+    <label style="color:#ddd; font-size:0.95rem;">📷 Photo d'identité
+      <input type="file" accept="image/*" required style="margin-top: 0.5rem;">
+    </label>
+
+    <label style="color:#ddd; font-size:0.95rem;">📁 Certificat Médical rempli
+      <input type="file" accept="application/pdf" required style="margin-top: 0.5rem;">
+    </label>
+
+    <label style="color:#ddd; font-size:0.95rem;">📁 Autorisation Parentale remplie
+      <input type="file" accept="application/pdf" required style="margin-top: 0.5rem;">
+    </label>
+
+    <label style="font-size: 0.95rem; color:#ccc;">
       <input type="checkbox" required>
       J'accepte le règlement intérieur, les conditions d'inscription et j'autorise l'utilisation de mon image (photos/vidéos) à des fins de communication du club.
     </label>
-    <button type="submit" style="padding: 0.8rem; border: none; background-color: #00ccff; color: black; font-weight: bold; border-radius: 5px; cursor: pointer;">Envoyer l'inscription</button>
+
+    <label style="color:#ddd; font-size:0.95rem;">💳 Choisis ton mode de paiement
+      <select required style="padding: 0.8rem; border-radius: 5px; border: none; margin-top: 0.5rem; font-size:1rem;">
+        <option value="">-- Mode de paiement --</option>
+        <option>Carte bancaire</option>
+        <option>Espèces</option>
+        <option>Chèque</option>
+        <option>Virement</option>
+        <option>Pass'Sport / Coupon Sport</option>
+      </select>
+    </label>
+
+    <button type="submit" style="padding: 1rem; background-color: #00ccff; color: black; font-weight: bold; border-radius: 8px; cursor: pointer; font-size:1rem; transition: background 0.3s;">Envoyer l'inscription</button>
   </form>
+
+  <div id="confirmation-msg" style="display:none; text-align:center; color:#00ff99; font-weight:bold; margin-top:2rem; font-size:1.2rem;">
+    ✅ Formulaire soumis avec succès ! Un responsable du club vous contactera prochainement.
+  </div>
+
+  <p style="text-align: center; margin-top: 2rem; color:#aaa;">
+    💻 Ou inscris-toi directement via EasyAsso : <br>
+    <a href="https://easyasso.fr/inscription.php?Club=teamthaiboxing" target="_blank" style="color:#00ccff; font-weight:bold; text-decoration: none;">➡️ Plateforme d'inscription en ligne</a>
+  </p>
 </section>
 
 </body>

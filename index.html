@@ -4,386 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carcharias Boxing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #0d0d0d;
-      padding-top: 120px;
-      color: white;
-      font-family: 'Anton', sans-serif;
-    }
-
-    header {
-      background-color: #000000;
-      min-height: 120px;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.8);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 9999;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      font-size: 2.2rem;
-      color: #00ccff;
-      font-family: 'Bebas Neue', cursive;
-      text-shadow: 0 0 10px #00ccff;
-    }
-
-    .logo img {
-      height: 100px;
-      margin-right: 15px;
-      filter: drop-shadow(0 0 6px #00ccff);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    nav a {
-      padding: 0.5rem 1rem;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #00ccff;
-      border-bottom: 2px solid #00ccff;
-    }
-
-    .hero-slider {
-      position: relative;
-      overflow: hidden;
-      height: 90vh;
-      background-color: black;
-    }
-
-    .slider-track {
-      display: flex;
-      width: 400%;
-      animation: slide 18s linear infinite;
-    }
-
-    .slider-track img {
-      width: 100vw;
-      object-fit: cover;
-      flex-shrink: 0;
-      filter: brightness(0.7);
-    }
-
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100vw); }
-    }
-
-    .slider-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      text-align: center;
-    }
-
-    .slider-text h1 {
-      font-family: 'Bebas Neue', cursive;
-      font-size: 5rem;
-      color: #00ccff;
-      text-shadow: 2px 2px 10px black;
-    }
-
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-family: 'Bebas Neue', cursive;
-      color: #00ccff;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="images/logocarcharias.png" alt="Logo Carcharias">
-      <span>Carcharias Boxing</span>
-    </div>
-    <nav>
-      <a href="#">Accueil</a>
-      <a href="#club">Le Club</a>
-      <a href="#horaires">Horaires</a>
-      <a href="#inscriptions">Inscriptions</a>
-      <a href="#boutique">Boutique</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<body class="bg-black text-white">
 
-  <section class="hero-slider">
-    <div class="slider-text">
-      <h1>Bienvenue chez Carcharias Boxing</h1>
-    </div>
-    <div class="slider-track">
-      <img src="images/boxe1.jpg" alt="Boxe 1">
-      <img src="images/boxe2.jpg" alt="Boxe 2">
-      <img src="images/boxe3.jpg" alt="Boxe 3">
-      <img src="images/logocarcharias.png" alt="Logo Carcharias">
-    </div>
-  </section>
-  </section>
-
-  <section class="section fade-in" id="club">
-    <h2>Le Club</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem;">
-      <img src="images/salle.jpg" alt="Salle d'entraînement" style="width: 400px; max-width: 100%; border-radius: 8px; box-shadow: 0 0 10px #00ccff;">
-      <div style="max-width: 500px;">
-        <p style="font-size: 1.2rem; line-height: 1.6;">
-          Fondé en 1996, <strong>Team Carcharias Boxing</strong> s’est imposé comme l’un des clubs de boxe les plus emblématiques de la région Occitanie. Né de la passion de ses fondateurs pour le noble art, le club a depuis formé plusieurs générations de boxeurs, dont de nombreux athlètes d’élite au niveau national et international.<br><br>
-          Situé à Perpignan, notre club est bien plus qu’un lieu d’entraînement : c’est une école de vie. Ici, la boxe se transmet avec exigence, passion et bienveillance. Nos coachs diplômés, eux-mêmes anciens compétiteurs, accompagnent tous les profils : enfants, ados, adultes, débutants ou confirmés.<br><br>
-          Le style Carcharias, c’est l’engagement total sur le ring, mais aussi en dehors. Le respect, la rigueur, la solidarité et le dépassement de soi sont au cœur de notre projet. Que tu viennes pour te défouler, pour progresser, ou pour atteindre le haut niveau, tu trouveras chez nous les moyens de tes ambitions.<br><br>
-          🦈 <em>Team Carcharias Boxing — Frappe fort, reste humble.</em>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section fade-in" id="horaires">
-  <h2 style="text-align:center; color:#00ccff; font-family: 'Bebas Neue', cursive; font-size: 3rem;">Horaires des Cours</h2>
-  <div style="overflow-x:auto; margin-top:2rem;">
-    <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
-      <thead>
-        <tr style="background-color:#2a2a2a; color:white;">
-          <th style="padding: 1rem; border: 1px solid #444;">Horaires</th>
-          <th style="padding: 1rem; border: 1px solid #444;">Lundi</th>
-          <th style="padding: 1rem; border: 1px solid #444;">Mardi</th>
-          <th style="padding: 1rem; border: 1px solid #444;">Mercredi</th>
-          <th style="padding: 1rem; border: 1px solid #444;">Jeudi</th>
-          <th style="padding: 1rem; border: 1px solid #444;">Vendredi</th>
-          <th style="padding: 1rem; border: 1px solid #444;">Samedi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#2a2a2a; color:white;">10h – 12h</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#003366; color:white;">Prépa compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#003366; color:white;">Prépa compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#003366; color:white;">Prépa compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#003366; color:white;">Prépa compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#003366; color:white;">Prépa compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-        </tr>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#2a2a2a; color:white;">15h – 16h30</td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#33cc33; color:black;">Boxe éducative (5–10 ans)</td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#33cc33; color:black;">Boxe éducative (5–10 ans)</td>
-        </tr>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#2a2a2a; color:white;">16h30 – 18h</td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#ffcc00; color:black;">Boxe éducative (11–15 ans)</td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#ffcc00; color:black;">Boxe éducative (11–15 ans)</td>
-        </tr>
-        <tr>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#2a2a2a; color:white;">18h – 20h</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#00bcd4; color:white;">Kickboxing (Adultes)</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#ff4444; color:white;">Compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#00bcd4; color:white;">Kickboxing (Adultes)</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#ff4444; color:white;">Compétiteurs</td>
-          <td style="padding: 1rem; border: 1px solid #444; background-color:#00bcd4; color:white;">Kickboxing (Adultes)</td>
-          <td style="padding: 1rem; border: 1px solid #444;"></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-  <section class="section fade-in" id="partenaires" style="background-color: #111; padding: 4rem 2rem;">
-  <h2 style="text-align:center; color:#00ccff; font-family: 'Bebas Neue', cursive; font-size: 3rem;">Nos Partenaires</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin-top: 2rem;">
-    <img src="images/partenaire1.png" alt="Partenaire 1" style="height: 80px; filter: brightness(1.1);">
-    <img src="images/partenaire2.png" alt="Partenaire 2" style="height: 80px; filter: brightness(1.1);">
-    <img src="images/partenaire3.png" alt="Partenaire 3" style="height: 80px; filter: brightness(1.1);">
-    <!-- Ajoutez d'autres logos ici -->
-  </div>
-<section class="section fade-in" id="inscriptions" style="background-color:#111; padding:4rem 2rem; border-radius:12px; box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);">
-  <h2 style="text-align:center; color:#00ccff; font-family: 'Bebas Neue', cursive; font-size: 3.5rem; text-transform:uppercase; letter-spacing:2px;">Inscriptions</h2>
-  <p style="text-align:center; max-width:800px; margin: auto; font-size:1.1rem; color:#ccc;">
-    Pour t'inscrire, merci de compléter le formulaire ci-dessous. <br>
-    Tu peux aussi télécharger les documents nécessaires : certificat médical, autorisation parentale, fiche d'inscription.
-  </p>
-
-  <div style="margin-top: 2rem; text-align: center;">
-    <a href="documents/certificat_medical.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem; text-decoration:none;">📄 Certificat Médical</a>
-    <a href="documents/autorisation_parentale.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem; text-decoration:none;">📄 Autorisation Parentale</a>
-    <a href="documents/fiche_inscription.pdf" download style="color: #00ccff; font-weight: bold; margin: 0 1rem; text-decoration:none;">📄 Fiche d'inscription</a>
-  </div>
-
-  <form onsubmit="event.preventDefault(); document.getElementById('confirmation-msg').style.display = 'block'; this.reset();" style="max-width: 700px; margin: 3rem auto 0; background-color: #1a1a1a; padding: 2rem; border-radius: 10px; display: flex; flex-direction: column; gap: 1rem;">
-    <input type="text" name="nom" placeholder="Nom" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
-    <input type="text" name="prenom" placeholder="Prénom" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
-    <input type="email" name="email" placeholder="Email" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
-    <input type="tel" name="tel" placeholder="Téléphone" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
-    <select name="categorie" required style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;">
-      <option value="">Choisis ta catégorie</option>
-      <option>Enfant (5–10 ans)</option>
-      <option>Ados (11–15 ans)</option>
-      <option>Adultes / Compétiteurs</option>
-    </select>
-    <textarea name="message" placeholder="Message ou info complémentaire" rows="4" style="padding: 0.8rem; border-radius: 5px; border: none; font-size:1rem;"></textarea>
-
-    <label style="color:#ddd; font-size:0.95rem;">📷 Photo d'identité
-      <input type="file" accept="image/*" required style="margin-top: 0.5rem;">
-    </label>
-
-    <label style="color:#ddd; font-size:0.95rem;">📁 Certificat Médical rempli
-      <input type="file" accept="application/pdf" required style="margin-top: 0.5rem;">
-    </label>
-
-    <label style="color:#ddd; font-size:0.95rem;">📁 Autorisation Parentale remplie
-      <input type="file" accept="application/pdf" required style="margin-top: 0.5rem;">
-    </label>
-
-    <label style="font-size: 0.95rem; color:#ccc;">
-      <input type="checkbox" required>
-      J'accepte le règlement intérieur, les conditions d'inscription et j'autorise l'utilisation de mon image (photos/vidéos) à des fins de communication du club.
-    </label>
-
-    <label style="color:#ddd; font-size:0.95rem;">💳 Choisis ton mode de paiement
-      <select required style="padding: 0.8rem; border-radius: 5px; border: none; margin-top: 0.5rem; font-size:1rem;">
-        <option value="">-- Mode de paiement --</option>
-        <option>Carte bancaire</option>
-        <option>Espèces</option>
-        <option>Chèque</option>
-        <option>Virement</option>
-        <option>Pass'Sport / Coupon Sport</option>
-      </select>
-    </label>
-
-    <button type="submit" style="padding: 1rem; background-color: #00ccff; color: black; font-weight: bold; border-radius: 8px; cursor: pointer; font-size:1rem; transition: background 0.3s;">Envoyer l'inscription</button>
-  </form>
-
-  <div id="confirmation-msg" style="display:none; text-align:center; color:#00ff99; font-weight:bold; margin-top:2rem; font-size:1.2rem;">
-    ✅ Formulaire soumis avec succès ! Un responsable du club vous contactera prochainement.
-  </div>
-
-  <p style="text-align: center; margin-top: 2rem; color:#aaa;">
-    💻 Ou inscris-toi directement via EasyAsso : <br>
-    <a href="https://easyasso.fr/inscription.php?Club=teamthaiboxing" target="_blank" style="color:#00ccff; font-weight:bold; text-decoration: none;">➡️ Plateforme d'inscription en ligne</a>
-  </p>
-</section>
-    <section class="section fade-in" id="inscriptions" style="background-color:#111; padding:4rem 2rem; border-radius:12px; box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);">
-  <!-- Inscriptions section (déjà existante) ici -->
-  ...
+<!-- Inscriptions -->
+<section id="inscriptions" class="bg-gray-900 p-10 rounded-xl shadow-lg text-white max-w-4xl mx-auto my-10">
+  <h2 class="text-center text-3xl font-bold text-cyan-400 mb-4">Inscriptions</h2>
+  <p class="text-center text-gray-300">Formulaire et documents à remplir...</p>
 </section>
 
-<section class="section fade-in" id="boutique" style="background-color:#0d0d0d; padding:4rem 2rem;">
-  <h2 style="text-align:center; color:#00ccff; font-family:'Bebas Neue', cursive; font-size:3.5rem; text-transform:uppercase; letter-spacing:2px;">Boutique du Club</h2>
-  <p style="text-align:center; color:#ccc; max-width:800px; margin:auto;">Commandez nos équipements officiels Carcharias Boxing : tenues, gants, sacs, et plus encore. Paiement sécurisé en ligne ou au club.</p>
+<!-- Boutique -->
+<section id="boutique" class="bg-black py-16 px-4 text-white">
+  <h2 class="text-center text-cyan-400 text-4xl font-bold uppercase tracking-widest font-mono">Boutique du Club</h2>
+  <p class="text-center text-gray-300 max-w-2xl mx-auto mt-4">Commandez nos équipements officiels Carcharias Boxing : tenues, gants, sacs, et plus encore.</p>
 
-  <div id="cart-notice" style="display:none; text-align:center; color:#00ff99; font-weight:bold; margin:1rem 0;">✅ Article ajouté au panier</div>
+  <div id="cart-notice" class="hidden text-center text-green-400 font-bold my-4">✅ Article ajouté au panier</div>
 
-  <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:3rem;">
-    <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
-      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
-        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
-        <h3 style="color:#00ccff;">Maillot Officiel</h3>
-        <p style="color:#ccc;">Taille S à XL</p>
-        <p style="font-weight:bold; color:white;">25€</p>
-        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
-      </div>
-    </a>
+  <div class="flex flex-wrap gap-8 justify-center mt-12">
+    <div class="bg-gray-800 rounded-lg w-64 text-center p-4">
+      <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" class="w-full rounded-md">
+      <h3 class="text-cyan-400 text-xl font-semibold mt-3">Maillot Officiel</h3>
+      <p class="text-gray-300">Taille S à XL</p>
+      <p class="text-white font-bold">25€</p>
+      <button onclick="addToCart('Maillot Officiel', 25)" class="bg-cyan-400 text-black mt-3 px-4 py-2 rounded hover:bg-cyan-300">Ajouter</button>
+    </div>
 
-    <a href="#" onclick="addToCart('Gants de Boxe', 60); return false;" style="text-decoration:none;">
-      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
-        <img src="images/produits/gants.jpg" alt="Gants de boxe" style="width:100%; border-radius:4px;">
-        <h3 style="color:#00ccff;">Gants de Boxe</h3>
-        <p style="color:#ccc;">10 oz - 14 oz</p>
-        <p style="font-weight:bold; color:white;">60€</p>
-        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
-      </div>
-    </a>
-    
-    <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
-      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
-        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
-        <h3 style="color:#00ccff;">Maillot Officiel</h3>
-        <p style="color:#ccc;">Taille S à XL</p>
-        <p style="font-weight:bold; color:white;">25€</p>
-        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
-      </div>
-    </a>
-    <!-- Ajoutez ici les autres produits de la même manière -->
+    <div class="bg-gray-800 rounded-lg w-64 text-center p-4">
+      <img src="images/produits/gants.jpg" alt="Gants de boxe" class="w-full rounded-md">
+      <h3 class="text-cyan-400 text-xl font-semibold mt-3">Gants de Boxe</h3>
+      <p class="text-gray-300">10 oz - 14 oz</p>
+      <p class="text-white font-bold">60€</p>
+      <button onclick="addToCart('Gants de Boxe', 60)" class="bg-cyan-400 text-black mt-3 px-4 py-2 rounded hover:bg-cyan-300">Ajouter</button>
+    </div>
   </div>
 
-    <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
-      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
-        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
-        <h3 style="color:#00ccff;">Maillot Officiel</h3>
-        <p style="color:#ccc;">Taille S à XL</p>
-        <p style="font-weight:bold; color:white;">25€</p>
-        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
-      </div>
-    </a>
-
-    <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" style="text-decoration:none;">
-      <div style="background:#1a1a1a; border-radius:8px; width:250px; text-align:center; padding:1rem;">
-        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" style="width:100%; border-radius:4px;">
-        <h3 style="color:#00ccff;">Maillot Officiel</h3>
-        <p style="color:#ccc;">Taille S à XL</p>
-        <p style="font-weight:bold; color:white;">25€</p>
-        <button style="background:#00ccff; color:black; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">Ajouter</button>
-      </div>
-    </a>
-
-  <div style="text-align:center; margin-top:3rem;">
-    <button onclick="toggleCart();" style="background:#00ccff; color:black; border:none; padding:1rem 2rem; font-weight:bold; border-radius:8px; cursor:pointer;">🛒 Voir le panier</button>
+  <div class="text-center mt-12">
+    <button onclick="toggleCart();" class="bg-cyan-400 text-black px-6 py-3 font-bold rounded hover:bg-cyan-300">🛒 Voir le panier</button>
   </div>
 
-  <div id="cart" style="display:none; margin-top:2rem; background:#111; color:white; padding:2rem; border-radius:8px; max-width:600px; margin:auto;">
-    <h3 style="text-align:center; color:#00ccff;">🛒 Panier</h3>
-    <ul id="cart-items" style="list-style:none; padding:0;"></ul>
-    <p style="text-align:right; font-weight:bold; margin-top:1rem;">Total : <span id="cart-total">0€</span></p>
+  <div id="cart" class="hidden mt-10 bg-gray-900 text-white p-6 rounded-lg max-w-xl mx-auto">
+    <h3 class="text-center text-cyan-400 text-2xl font-bold mb-4">🛒 Panier</h3>
+    <ul id="cart-items" class="list-none p-0"></ul>
+    <p class="text-right font-bold mt-4">Total : <span id="cart-total">0€</span></p>
   </div>
 </section>
 
@@ -392,8 +55,8 @@
 
   function addToCart(product, price) {
     cart.push({ product, price });
-    document.getElementById("cart-notice").style.display = "block";
-    setTimeout(() => document.getElementById("cart-notice").style.display = "none", 2000);
+    document.getElementById("cart-notice").classList.remove("hidden");
+    setTimeout(() => document.getElementById("cart-notice").classList.add("hidden"), 2000);
     updateCart();
   }
 
@@ -405,8 +68,8 @@
     cart.forEach((item, index) => {
       sum += item.price;
       const li = document.createElement("li");
-      li.style.marginBottom = "10px";
-      li.innerHTML = `${item.product} - ${item.price}€ <button onclick="removeFromCart(${index})" style="margin-left:10px; background:red; color:white; border:none; border-radius:4px; cursor:pointer;">Supprimer</button>`;
+      li.className = "mb-2";
+      li.innerHTML = `${item.product} - ${item.price}€ <button onclick="removeFromCart(${index})" class="ml-4 bg-red-600 text-white px-2 py-1 rounded hover:bg-red-500">Supprimer</button>`;
       list.appendChild(li);
     });
     total.innerText = sum + '€';
@@ -419,11 +82,9 @@
 
   function toggleCart() {
     const cartDiv = document.getElementById("cart");
-    cartDiv.style.display = cartDiv.style.display === "none" ? "block" : "none";
+    cartDiv.classList.toggle("hidden");
   }
 </script>
 
-
 </body>
 </html>
-

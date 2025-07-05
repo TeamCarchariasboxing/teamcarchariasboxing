@@ -9,6 +9,27 @@
   html {
     scroll-behavior: smooth;
   }
+  #hero-slider {
+    position: relative;
+  }
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .hero-slide.active {
+    opacity: 1;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .slide-in {
+    animation: slideIn 1s ease-out;
+  }
   </style>
 </head>
 <body class="bg-black text-white font-sans">
@@ -23,8 +44,15 @@
 
 <!-- Hero -->
 <section id="accueil" class="pt-24 bg-black">
-  <div class="text-center py-20 bg-cover bg-center" style="background-image: url('https://via.placeholder.com/1920x600');">
-    <h1 class="text-5xl text-cyan-400 font-extrabold drop-shadow-lg">Bienvenue chez Carcharias Boxing</h1>
+  <div id="hero-slider" class="relative h-96 sm:h-[600px] overflow-hidden">
+    <div class="hero-slide active" style="background-image: url('images/boxe1.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/boxe2.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/boxe3.jpg');"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <h1 id="hero-text" class="text-5xl text-cyan-400 font-extrabold drop-shadow-lg slide-in text-center px-4">
+        Bienvenue chez Carcharias Boxing
+      </h1>
+    </div>
   </div>
 </section>
 
@@ -300,5 +328,20 @@
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('#hero-slider .hero-slide');
+  const text = document.getElementById('hero-text');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+    text.classList.remove('slide-in');
+    void text.offsetWidth;
+    text.classList.add('slide-in');
+  }, 4000);
+});
+</script>
 </body>
 </html>

@@ -231,7 +231,7 @@
 <section id="inscriptions" class="py-16 bg-gray-800">
   <div class="container mx-auto px-4 max-w-3xl">
     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Inscription</h2>
-    <form class="bg-gray-900 p-6 rounded-lg space-y-4">
+    <form class="bg-gray-900 p-6 rounded-lg space-y-4" enctype="multipart/form-data">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
           <label for="nom" class="block text-gray-300 mb-1">Nom</label>
@@ -268,6 +268,34 @@
         <div class="md:col-span-2">
           <label for="certificat" class="block text-gray-300 mb-1">Certificat médical</label>
           <input id="certificat" name="certificat" type="file" class="w-full p-3 bg-gray-700 text-white">
+        </div>
+        <div class="md:col-span-2">
+          <label for="photo" class="block text-gray-300 mb-1">Photo d'identité</label>
+          <input id="photo" name="photo" type="file" class="w-full p-3 bg-gray-700 text-white">
+        </div>
+        <div class="md:col-span-2">
+          <label for="autorisation" class="block text-gray-300 mb-1">Autorisation parentale</label>
+          <input id="autorisation" name="autorisation" type="file" class="w-full p-3 bg-gray-700 text-white">
+        </div>
+        <div>
+          <label for="paiement" class="block text-gray-300 mb-1">Mode de paiement</label>
+          <select id="paiement" name="paiement" class="w-full p-3 rounded bg-gray-700 text-white">
+            <option value="carte">Carte bancaire</option>
+            <option value="especes">Espèces</option>
+            <option value="cheque">Chèque</option>
+          </select>
+        </div>
+        <div>
+          <label for="pratique" class="block text-gray-300 mb-1">Type de pratique</label>
+          <select id="pratique" name="pratique" class="w-full p-3 rounded bg-gray-700 text-white">
+            <option value="loisir">Loisir</option>
+            <option value="educative">Éducative</option>
+            <option value="competition">Compétitive</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label for="contacts" class="block text-gray-300 mb-1">Personnes à contacter en cas de problème</label>
+          <input id="contacts" name="contacts" type="text" class="w-full p-3 rounded bg-gray-700 text-white" placeholder="Nom et téléphone">
         </div>
         <div class="md:col-span-2">
           <label class="inline-flex items-center text-gray-300">

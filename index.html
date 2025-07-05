@@ -231,16 +231,116 @@
 <section id="inscriptions" class="py-16 bg-gray-800">
   <div class="container mx-auto px-4 max-w-3xl">
     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Inscription</h2>
-    <div class="bg-gray-900 p-6 rounded-lg">
-      <iframe
-        src="https://easyasso.fr/inscription.php?Club=teamthaiboxing"
-        class="w-full h-[800px] bg-white"
-        title="Formulaire d'inscription">
-      </iframe>
-      <p class="text-center mt-2 text-sm text-gray-300">
-        <a href="https://easyasso.fr/inscription.php?Club=teamthaiboxing" class="underline text-cyan-400" target="_blank" rel="noopener">Ouvrir le formulaire dans un nouvel onglet</a>
-      </p>
-    </div>
+    diff --git a/index.html b/index.html
+index 96b8dc9620bdd1f8c25185988a33811f00871bcb..9225447db49c4df7f44b8d864e12f3abd7518949 100644
+--- a/index.html
++++ b/index.html
+@@ -182,56 +182,97 @@
+     <div class="mt-6 text-gray-300">
+       <p class="mb-2 font-semibold">Pensez &agrave; prendre avec vous&nbsp;:</p>
+       <ul class="list-disc list-inside space-y-1">
+         <li>gants, bandages et prot&egrave;ge-dents obligatoires</li>
+         <li>casque ou coquille selon votre pratique</li>
+         <li>&eacute;quipements facultatifs&nbsp;: corde &agrave; sauter, serviette personnelle, etc.</li>
+         <li>une bouteille d'eau et de quoi se doucher sur place</li>
+       </ul>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- Footer -->
+ <footer class="bg-gray-900 py-6 mt-10">
+   <div class="text-center text-gray-400 text-sm">
+     © 2025 Carcharias Boxing — Tous droits réservés
+   </div>
+ </footer>
+ 
+ 
+ <!-- Inscriptions -->
+ <section id="inscriptions" class="py-16 bg-gray-800">
+   <div class="container mx-auto px-4 max-w-3xl">
+     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Inscription</h2>
+     <form class="bg-gray-900 p-6 rounded-lg space-y-4">
+-      <input type="text" placeholder="Nom" class="w-full p-3 rounded bg-gray-700 text-white" required>
+-      <input type="email" placeholder="Email" class="w-full p-3 rounded bg-gray-700 text-white" required>
+-      <input type="tel" placeholder="Téléphone" class="w-full p-3 rounded bg-gray-700 text-white">
+-      <input type="file" class="w-full p-3 bg-gray-700 text-white">
+-      <label class="block text-gray-300"><input type="checkbox" class="mr-2"> J'accepte les conditions & l'autorisation à l'image</label>
+-      <button class="bg-cyan-400 hover:bg-cyan-300 text-black font-bold px-6 py-2 rounded">Envoyer</button>
++      <div class="grid md:grid-cols-2 gap-4">
++        <div>
++          <label for="nom" class="block text-gray-300 mb-1">Nom</label>
++          <input id="nom" name="nom" type="text" class="w-full p-3 rounded bg-gray-700 text-white" required>
++        </div>
++        <div>
++          <label for="prenom" class="block text-gray-300 mb-1">Prénom</label>
++          <input id="prenom" name="prenom" type="text" class="w-full p-3 rounded bg-gray-700 text-white" required>
++        </div>
++        <div>
++          <label for="naissance" class="block text-gray-300 mb-1">Date de naissance</label>
++          <input id="naissance" name="naissance" type="date" class="w-full p-3 rounded bg-gray-700 text-white" required>
++        </div>
++        <div>
++          <label for="telephone" class="block text-gray-300 mb-1">Téléphone</label>
++          <input id="telephone" name="telephone" type="tel" class="w-full p-3 rounded bg-gray-700 text-white">
++        </div>
++        <div class="md:col-span-2">
++          <label for="email" class="block text-gray-300 mb-1">Email</label>
++          <input id="email" name="email" type="email" class="w-full p-3 rounded bg-gray-700 text-white" required>
++        </div>
++        <div class="md:col-span-2">
++          <label for="adresse" class="block text-gray-300 mb-1">Adresse</label>
++          <input id="adresse" name="adresse" type="text" class="w-full p-3 rounded bg-gray-700 text-white">
++        </div>
++        <div>
++          <label for="ville" class="block text-gray-300 mb-1">Ville</label>
++          <input id="ville" name="ville" type="text" class="w-full p-3 rounded bg-gray-700 text-white">
++        </div>
++        <div>
++          <label for="cp" class="block text-gray-300 mb-1">Code postal</label>
++          <input id="cp" name="cp" type="text" class="w-full p-3 rounded bg-gray-700 text-white">
++        </div>
++        <div class="md:col-span-2">
++          <label for="certificat" class="block text-gray-300 mb-1">Certificat médical</label>
++          <input id="certificat" name="certificat" type="file" class="w-full p-3 bg-gray-700 text-white">
++        </div>
++        <div class="md:col-span-2">
++          <label class="inline-flex items-center text-gray-300">
++            <input type="checkbox" required class="mr-2">
++            J'accepte les conditions &amp; l'autorisation à l'image
++          </label>
++        </div>
++      </div>
++      <div class="text-center">
++        <button type="submit" class="bg-cyan-400 hover:bg-cyan-300 text-black font-bold px-6 py-2 rounded">Envoyer</button>
++      </div>
+     </form>
+     <div class="text-center mt-6">
+       <a href="documents/certificat_medical.pdf" class="text-cyan-400 underline">📄 Télécharger le certificat médical</a><br>
+       <a href="documents/autorisation_parentale.pdf" class="text-cyan-400 underline">📄 Télécharger l'autorisation parentale</a>
+     </div>
+   </div>
+ </section>
+ 
+ <!-- Boutique -->
+ <section id="boutique" class="py-16 bg-gray-900">
+   <div class="container mx-auto px-4 text-center">
+     <h2 class="text-3xl text-cyan-400 font-bold mb-8">Boutique</h2>
+     <p class="text-gray-300 mb-4">Découvrez notre gamme de gants, t-shirts et accessoires siglés Carcharias.</p>
+     <p class="text-gray-300">Bientôt disponible en ligne&nbsp;!</p>
+   </div>
+ </section>
+ 
+ <!-- Blog -->
+ <section id="blog" class="py-16 bg-black">
+   <div class="container mx-auto px-4">
+     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Actualités</h2>
+     <div class="grid md:grid-cols-2 gap-8">
+       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+         <h3 class="text-xl text-white font-semibold mb-2">📢 Résultats du championnat régional</h3>
+         <p class="text-gray-300 text-sm">Nos athlètes ont brillé lors du championnat du Sud-Ouest...</p>
+
+  
     <div class="text-center mt-6">
       <a href="documents/certificat_medical.pdf" class="text-cyan-400 underline">📄 Télécharger le certificat médical</a><br>
       <a href="documents/autorisation_parentale.pdf" class="text-cyan-400 underline">📄 Télécharger l'autorisation parentale</a>

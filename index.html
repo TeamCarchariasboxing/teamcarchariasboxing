@@ -17,24 +17,7 @@
 <header class="bg-gray-900 text-white fixed top-0 w-full shadow-md z-50">
   <div class="container mx-auto flex justify-between items-center p-4">
     <div class="text-2xl font-bold text-cyan-400">Carcharias Boxing</div>
-    <nav class="space-x-4">
-      <a href="#accueil" class="hover:text-cyan-400">Accueil</a>
-     <nav>
-  <a href="#club">Le Club</a>
-  <a href="#histoire">Histoire</a>
-  <a href="#valeurs">Valeurs</a>
-  <a href="#reussites">Réussites</a>
-  <a href="#projets">Objectifs</a>
-  <a href="#encadrement">Encadrement</a>
-  <a href="#organigramme">Organigramme</a>
-  <!-- Garde les autres liens existants : Inscriptions, Contact, etc. -->
-</nav>
-      <a href="#horaires" class="hover:text-cyan-400">Horaires</a>
-      <a href="#inscriptions" class="hover:text-cyan-400">Inscriptions</a>
-      <a href="#boutique" class="hover:text-cyan-400">Boutique</a>
-      <a href="#blog" class="hover:text-cyan-400">Blog</a>
-      <a href="#contact" class="hover:text-cyan-400">Contact</a>
-    </nav>
+    
   </div>
 </header>
 
@@ -189,6 +172,33 @@
     <a href="#projets" class="block px-4 py-2 text-white hover:bg-gray-800">Objectifs</a>
     <a href="#encadrement" class="block px-4 py-2 text-white hover:bg-gray-800">Encadrement</a>
     <a href="#organigramme" class="block px-4 py-2 text-white hover:bg-gray-800">Organigramme</a>
+  </div>
+</div>
+<!-- Bouton menu flottant complet -->
+<div class="fixed top-6 left-6 z-50 group">
+  <div class="bg-cyan-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 cursor-pointer transition hover:bg-cyan-500" onclick="document.getElementById('submenu').classList.toggle('hidden')">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    <span class="font-semibold">Menu</span>
+  </div>
+  <div id="submenu" class="mt-2 bg-gray-900 rounded-lg shadow-lg hidden w-64 overflow-hidden border border-gray-700">
+    <a href="#accueil" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">🏠 Accueil</a>
+    <a href="#club" class="block px-4 py-2 text-cyan-400 font-bold bg-gray-800">🥊 Le Club</a>
+    <div class="pl-4">
+      <a href="#histoire" class="block px-4 py-2 text-white text-sm hover:bg-gray-800">• Histoire</a>
+      <a href="#valeurs" class="block px-4 py-2 text-white text-sm hover:bg-gray-800">• Valeurs</a>
+      <a href="#reussites" class="block px-4 py-2 text-white text-sm hover:bg-gray-800">• Réussites</a>
+      <a href="#projets" class="block px-4 py-2 text-white text-sm hover:bg-gray-800">• Objectifs</a>
+      <a href="#encadrement" class="block px-4 py-2 text-white text-sm hover:bg-gray-800">• Encadrement</a>
+      <a href="#organigramme" class="block px-4 py-2 text-white text-sm hover:bg-gray-800">• Organigramme</a>
+    </div>
+    <a href="#horaires" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">📆 Horaires</a>
+    <a href="#inscriptions" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">📝 Inscriptions</a>
+    <a href="#boutique" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">🛍️ Boutique</a>
+    <a href="#blog" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">📰 Blog</a>
+    <a href="#partenaires" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">🤝 Partenaires</a>
+    <a href="#contact" class="block px-4 py-2 text-white font-bold hover:bg-gray-800">📍 Contact</a>
   </div>
 </div>
 

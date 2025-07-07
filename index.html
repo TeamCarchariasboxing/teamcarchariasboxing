@@ -331,6 +331,84 @@
  
 
 
+<!-- Boutique -->
+<section id="boutique" class="bg-black py-16 px-4 text-white">
+  <h2 class="text-center text-cyan-400 text-4xl font-bold uppercase tracking-widest font-mono">Boutique du Club</h2>
+  <p class="text-center text-gray-300 max-w-2xl mx-auto mt-4">Commandez nos équipements officiels Carcharias Boxing : tenues, gants, sacs, et plus encore. Paiement sécurisé en ligne ou au club.</p>
+
+  <div id="cart-notice" class="hidden text-center text-green-400 font-bold my-4">✅ Article ajouté au panier</div>
+
+  <div class="flex flex-wrap gap-8 justify-center mt-12">
+    <a href="#" onclick="addToCart('Maillot Officiel', 25); return false;" class="no-underline">
+      <div class="bg-gray-800 rounded-lg w-64 text-center p-4">
+        <img src="images/produits/maillot1.jpg" alt="Maillot Officiel" class="w-full rounded-md">
+        <h3 class="text-cyan-400 text-xl font-semibold mt-3">Maillot Officiel</h3>
+        <p class="text-gray-300">Taille S à XL</p>
+        <p class="text-white font-bold">25€</p>
+        <button class="bg-cyan-400 text-black mt-3 px-4 py-2 rounded hover:bg-cyan-300">Ajouter</button>
+      </div>
+    </a>
+
+    <a href="#" onclick="addToCart('Gants de Boxe', 60); return false;" class="no-underline">
+      <div class="bg-gray-800 rounded-lg w-64 text-center p-4">
+        <img src="images/produits/gants.jpg" alt="Gants de boxe" class="w-full rounded-md">
+        <h3 class="text-cyan-400 text-xl font-semibold mt-3">Gants de Boxe</h3>
+        <p class="text-gray-300">10 oz - 14 oz</p>
+        <p class="text-white font-bold">60€</p>
+        <button class="bg-cyan-400 text-black mt-3 px-4 py-2 rounded hover:bg-cyan-300">Ajouter</button>
+      </div>
+    </a>
+
+    <!-- Ajoutez ici les autres produits de la même manière -->
+  </div>
+
+  <div class="text-center mt-12">
+    <button onclick="toggleCart();" class="bg-cyan-400 text-black px-6 py-3 font-bold rounded hover:bg-cyan-300">🛒 Voir le panier</button>
+  </div>
+
+  <div id="cart" class="hidden mt-10 bg-gray-900 text-white p-6 rounded-lg max-w-xl mx-auto">
+    <h3 class="text-center text-cyan-400 text-2xl font-bold mb-4">🛒 Panier</h3>
+    <ul id="cart-items" class="list-none p-0"></ul>
+    <p class="text-right font-bold mt-4">Total : <span id="cart-total">0€</span></p>
+  </div>
+</section>
+
+<script>
+  const cart = [];
+
+  function addToCart(product, price) {
+    cart.push({ product, price });
+    document.getElementById("cart-notice").classList.remove("hidden");
+    setTimeout(() => document.getElementById("cart-notice").classList.add("hidden"), 2000);
+    updateCart();
+  }
+
+  function updateCart() {
+    const list = document.getElementById("cart-items");
+    const total = document.getElementById("cart-total");
+    list.innerHTML = '';
+    let sum = 0;
+    cart.forEach((item, index) => {
+      sum += item.price;
+      const li = document.createElement("li");
+      li.className = "mb-2";
+      li.innerHTML = `${item.product} - ${item.price}€ <button onclick="removeFromCart(${index})" class="ml-4 bg-red-600 text-white px-2 py-1 rounded hover:bg-red-500">Supprimer</button>`;
+      list.appendChild(li);
+    });
+    total.innerText = sum + '€';
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function toggleCart() {
+    const cartDiv = document.getElementById("cart");
+    cartDiv.classList.toggle("hidden");
+  }
+</script>
+
 <!-- Blog -->
 <section id="blog" class="py-16 bg-red-900">
   <div class="container mx-auto px-4">

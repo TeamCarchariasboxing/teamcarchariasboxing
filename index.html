@@ -9,6 +9,9 @@
   html {
     scroll-behavior: smooth;
   }
+  body {
+    overflow-x: hidden;
+  }
   #hero-slider {
     position: relative;
   }
@@ -162,11 +165,11 @@
 </section>
 
 <!-- Horaires -->
-<section id="horaires" class="py-16 bg-black">
+<section id="horaires" class="py-16 bg-blue-900">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Horaires des Entraînements</h2>
-    <div class="overflow-x-auto">
-      <table class="min-w-full table-auto border-collapse border border-gray-700 text-center">
+    <div class="overflow-auto max-h-80">
+      <table class="min-w-max w-full table-auto border-collapse border border-gray-700 text-center">
         <thead class="bg-gray-800 text-cyan-400">
           <tr>
             <th class="p-3 border border-gray-700">Horaire</th>
@@ -231,7 +234,7 @@
 
 
 <!-- Inscriptions -->
-<section id="inscriptions" class="py-16 bg-gray-800">
+<section id="inscriptions" class="py-16 bg-purple-900">
   <div class="container mx-auto px-4 max-w-3xl">
     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Inscription</h2>
     <form class="bg-gray-900 p-6 rounded-lg space-y-4" enctype="multipart/form-data">
@@ -318,7 +321,7 @@
   </div>
 </section>
  <!-- Boutique -->
- <section id="boutique" class="py-16 bg-gray-900">
+ <section id="boutique" class="py-16 bg-green-900">
    <div class="container mx-auto px-4 text-center">
      <h2 class="text-3xl text-cyan-400 font-bold mb-8">Boutique</h2>
      <p class="text-gray-300 mb-4">Découvrez notre gamme de gants, t-shirts et accessoires siglés Carcharias.</p>
@@ -329,7 +332,7 @@
 
 
 <!-- Blog -->
-<section id="blog" class="py-16 bg-black">
+<section id="blog" class="py-16 bg-red-900">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">Actualités</h2>
     <div class="grid md:grid-cols-2 gap-8">
@@ -346,7 +349,7 @@
 </section>
 
 <!-- Partenaires -->
-<section id="partenaires" class="py-16 bg-gray-800">
+<section id="partenaires" class="py-16 bg-yellow-900">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl text-cyan-400 font-bold mb-6">Nos Partenaires</h2>
     <div class="flex justify-center flex-wrap gap-8">
@@ -358,13 +361,13 @@
 </section>
 
 <!-- Contact -->
-<section id="contact" class="py-16 bg-black">
+<section id="contact" class="py-16 bg-teal-900">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl text-cyan-400 font-bold mb-6">Nous contacter</h2>
     <p class="text-gray-300 mb-2">📍 1 Rue Étienne Terrus, 66000 Perpignan</p>
     <p class="text-gray-300 mb-2">📞 06.11.52.40.21</p>
     <p class="text-gray-300 mb-4">✉️ <a href="mailto:teamcarchariasboxing@live.fr" class="underline">teamcarchariasboxing@live.fr</a></p>
-    <iframe class="mx-auto rounded-lg" width="600" height="300" style="border:0" loading="lazy" allowfullscreen
+    <iframe class="mx-auto rounded-lg w-full h-72" style="border:0" loading="lazy" allowfullscreen
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.840220634888!2d2.894!3d42.698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12baacc0de1f0b2b%3A0x20c4275e6d3be709!2s1%20Rue%20Terrus%2C%2066000%20Perpignan%2C%20France!5e0!3m2!1sfr!2sfr!4v1621524136431!5m2!1sfr!2sfr">
     </iframe>
     <div class="max-w-md mx-auto mt-8 text-left">
